@@ -5,8 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-	@GetMapping("/MusicCharts")
+	@GetMapping("/")
 	public String root() {
+		return "Login_Resister";
+	}
+	
+	@GetMapping("/MusicChart")
+	public String MusicChart() {
 		return "MusicCharts";
 	}
 }

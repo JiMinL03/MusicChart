@@ -1,1 +1,54 @@
-<link rel="stylesheet" type="text/css" th:href="@{/LR_styles.css}">
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>로그인/회원가입</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/LR_styles.css}">
+</head>
+
+<body>
+	<h1>
+		<div class="padding">
+			<img class="logo" src="free-icon-love-song-3920284.png" height="60px" width="60px">
+		</div>
+		<label class="logoText">ChartVibes</label>
+	</h1>
+	
+	<div class="container" id="container">
+		<div class="form-container sign-in">
+			<form>
+				<h1>로그인</h1>
+				<input type="text" placeholder="아이디를 입력해주세요.">
+				<input type="password" placeholder="비밀번호를 입력해주세요.">
+				<button type="submit">로그인</button>
+			</form>
+		</div>
+		<div class="form-container sign-up">
+			<form>
+				<h1>회원가입</h1>
+				<input type="text" placeholder="아이디를 입력해주세요.">
+				<input type="password" placeholder="비밀번호를 입력해주세요.">
+				<input type="password" placeholder="비밀번호를 재입력해주세요.">
+				<button type="submit">회원가입</button>
+			</form>
+		</div>
+		<div class="toggle-container">
+			<div class="toggle">
+				<div class="toggle-panel toggle-right">
+					<h1>Let's listen to music</h1>
+					<label class="hiddenText">아직 회원가입을 안하셨나요?</label>
+					<button id="register">회원가입</button>
+				</div>
+				<div class="toggle-panel toggle-left">
+					<h1>Welcome, my friend!</h1>
+					<label class="hiddenText">이미 회원가입 하셨나요?</label>
+					<button id="login">로그인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/JS/LR.js"></script>
+</body>
+
+</html>
