@@ -1,0 +1,32 @@
+/*채연아 여기가 html에 스타일을 적용하는거야!*/
+/*css로 거의 모든 스타일을 다 만들 수 있음! 검색하면 관련된게 다 나오니까 디자인 구상 어떻게 할 지 생각만 하면 돼*/
+body{
+	background: linear-gradient(to right, #80BCBD, #F9F7C9);
+	/*이건 배경 그라데이션 넣는거!*/
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+	color: steelblue;
+	/*글자에 색깔을 입히는거고 css관련 문법들은 엄청 많아*/
+}
+label{
+	color: rgb(123, 131, 132);
+}
+.container{ 
+/*html들어가보면 class에 container라고 되어있는거 보이지? </>가 나올 때까지 스타일 적용!*/
+/* 클래스면 앞에 . 을 넣어줘야 하고 id도 있거든?그건 앞에 # 넣어줘야 해*/
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form{
+	border-radius: 10%;
+	background-color:rgb(255, 255, 255);
+	padding: 100px;
+    height: 100px;
+    width: 100px;
+}
