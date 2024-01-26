@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 	@GetMapping("/")
 	public String root() {
-		return "Login_Resister";
+		return "Login_Register";
 	}
 	
 	@GetMapping("/MusicChart")
