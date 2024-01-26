@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 
 @Getter
 @Setter
-@Entity(name = "Register")
+@Entity
 //register 테이븘 생성
 public class Register {
 	//컬럼추가
