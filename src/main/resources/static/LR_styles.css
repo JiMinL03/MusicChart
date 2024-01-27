@@ -58,7 +58,8 @@ button {
 	background-color: #E6A4B4;
 	border: none;
 	border-radius: 8px;
-	color: #ffffff
+	color: #ffffff;
+	cursor: pointer;
 }
 
 .container form {
@@ -92,7 +93,7 @@ button {
 .sign-in {
 	left: 0;
 	width: 50%;
-	z-index: 1;
+	z-index: 2;
 }
 
 .container.active .sign-in {
@@ -193,4 +194,9 @@ button {
 
 .container.active .toggle-right {
 	transform: translateX(200%);
+}
+
+.message{
+	color: rgb(217, 0, 0);
+	margin-left: 150px;
 }

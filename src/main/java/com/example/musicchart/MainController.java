@@ -9,11 +9,6 @@ public class MainController {
 	public String root() {
 		return "Login_Register";
 	}
-	
-	@GetMapping("/MusicChart")
-	public String MusicChart() {
-		return "MusicCharts";
-	}
 }
 //이 코드는 웹에서 http://localhost:8080/MusicCharts로 요청이 들어오면
 //MusicCharts.html파일로 넘어가게 하는 코드야!
