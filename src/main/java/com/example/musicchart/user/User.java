@@ -1,13 +1,12 @@
-package com.example.user;
-
-import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
+package com.example.musicchart.user;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -16,7 +15,7 @@ import jakarta.persistence.Id;
 public class User {
 	// 컬럼추가
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String id;
 
 	@Column(columnDefinition = "TEXT")
