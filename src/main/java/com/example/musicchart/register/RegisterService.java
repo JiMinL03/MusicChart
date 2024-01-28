@@ -1,13 +1,12 @@
-package com.example.register;
+package com.example.musicchart.register;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.musicchart.DataNotFoundException;
-import com.example.user.User;
+import com.example.musicchart.user.User;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,11 +21,20 @@ public class RegisterService {
 	}
 	
 	public List<User> getData(String id) {//id 키값과 같은 행의 데이터를 리턴한다.
-		List<User> allData = this.registerrespository.findAllByRelatedId(id);
+		List<User> allData = this.registerrespository.findAllById(id);
 		if (!allData.isEmpty()) {
 			return allData;
 		} else {
 			throw new DataNotFoundException("user not found");
 		}
+	}
+	
+	public void saveData(String userName, String userEmail, String userId, String userPassword) {
+		User user = new User();
+		user.setName(userName);
+		user.setMail(userEmail);
+		user.setId(userId);
+		user.setPassword(userPassword);
+		this.registerrespository.save(user);
 	}
 }

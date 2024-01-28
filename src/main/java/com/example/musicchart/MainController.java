@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-	@GetMapping("/")
-	public String root() {
+	@GetMapping("/welcome")
+	public String main() {
 		return "Login_Register";
 	}
 }
