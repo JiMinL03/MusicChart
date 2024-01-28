@@ -18,7 +18,7 @@
 
 	<div class="container" id="container">
 		<div class="form-container sign-in">
-			<form name="loginForm" method="get"
+			<form name="loginForm" th:action="@{/login}" method="post"
 				onsubmit="return loginFormM()">
 				<h1>로그인</h1>
 				<input name="userId" type="text" placeholder="아이디를 입력해주세요.">
@@ -28,7 +28,7 @@
 			</form>
 		</div>
 		<div class="form-container sign-up">
-			<form name="registerForm" th:action="@{/Register}" method="post"
+			<form name="registerForm" th:action="@{/register}" method="post"
 				onsubmit="return registerFormM()">
 				<h1>회원가입</h1>
 				<input name="userName" type="text" placeholder="닉네임을 입력해주세요.">

@@ -1,4 +1,4 @@
-package com.example.musicchart.register;
+package com.example.musicchart.loginAndregister;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Controller
-@RequestMapping("/Register")
+@RequestMapping("/register")
 public class RegisterController {
 	@Autowired
 	private final RegisterService registerservice;
@@ -43,4 +43,5 @@ public class RegisterController {
 //		}
 //		return "Login_Register"; // 실제 페이지 이름에 맞게 변경해야 합니다.
 //	}
+	
 }
