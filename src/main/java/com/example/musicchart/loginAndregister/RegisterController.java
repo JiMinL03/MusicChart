@@ -24,7 +24,7 @@ public class RegisterController {
 			@RequestParam (name = "userPassword") String userPassword) {
 		boolean checkExistsId = registerservice.isIdAlreadyExistsId(userId);
 		String existsIdMessage = "이미 존재하는 아이디입니다.";
-		String nonExistsIdMessage = "사용할 수 있는 아이디입니다.";
+		String nonExistsIdMessage = "횐영합니다. 회원님!";
 		if (!checkExistsId) {
 	        this.registerservice.saveData(userName, userEmail, userId, userPassword);
 	        messagingTemplate.convertAndSend("/topic/registration", nonExistsIdMessage);
