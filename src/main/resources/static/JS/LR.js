@@ -59,18 +59,32 @@ stompClient.connect({}, function(frame) {
         updatePage(message.body);
     });
 });
-
 // 페이지 업데이트 함수
 function updatePage(message) {
     // 메시지를 사용하여 페이지 업데이트 로직을 수행
     console.log('Received message: ' + message);
-    document.getElementById('label').innerText = message;
+    if(message==="이미 존재하는 아이디입니다."){
+		document.getElementById('label').innerText = message;
+	}else{
+		alert(message);
+	}
 }
 
 document.getElementById('connect').addEventListener('click', function() {
     stompClient.send("/app/hello", {}, JSON.stringify({}));
 });
-
+document.getElementById('disconnect').addEventListener('click', function(){
+	if (socket) {
+        // 웹소켓 연결 종료
+        socket.close();
+        
+        // 연결이 종료되었음을 콘솔에 로그
+        console.log('WebSocket connection closed');
+    } else {
+        // 연결이 없다면 콘솔에 로그
+        console.log('WebSocket connection not established');
+    }
+});
 document.getElementById('connect').addEventListener('click', function(event) {
     event.preventDefault();  // 기본 제출 동작 중지
 
