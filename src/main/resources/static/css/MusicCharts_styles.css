@@ -1,32 +1,43 @@
-/*채연아 여기가 html에 스타일을 적용하는거야!*/
-/*css로 거의 모든 스타일을 다 만들 수 있음! 검색하면 관련된게 다 나오니까 디자인 구상 어떻게 할 지 생각만 하면 돼*/
-body{
-	background: linear-gradient(to right, #80BCBD, #F9F7C9);
-	/*이건 배경 그라데이션 넣는거!*/
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+	background: linear-gradient(to right, #FFF8E3, #E6A4B4);
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	height: 100dvh;
+	overflow: hidden;
+}
+
+.music {
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	flex-direction: row;
+	margin-left: 10px;
+	margin-top: 20px;
+	position: fixed;
 }
-h1{
-	color: steelblue;
-	/*글자에 색깔을 입히는거고 css관련 문법들은 엄청 많아*/
+
+#search {
+	background-color: rgba(240, 248, 255, 0);
+	border: none;
+	margin-top: 10px;
+	margin-left: 440px;
+	position: fixed;
 }
-label{
-	color: rgb(123, 131, 132);
+
+input {
+	position: fixed;
+	margin-left: 30px;
+	border-radius: 30px;
+	margin-top: 10px;
+	height: 30px;
+	width: 400px;
+	font-size: 17px;
+	border-color: #E6A4B4;
 }
-.container{ 
-/*html들어가보면 class에 container라고 되어있는거 보이지? </>가 나올 때까지 스타일 적용!*/
-/* 클래스면 앞에 . 을 넣어줘야 하고 id도 있거든?그건 앞에 # 넣어줘야 해*/
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-form{
-	border-radius: 10%;
-	background-color:rgb(255, 255, 255);
-	padding: 100px;
-    height: 100px;
-    width: 100px;
+.details{
+	background-color: rgba(240, 248, 255, 0);
+	position: absolute;
+	right: 20px;
+	border: none;
+	position: fixed;
 }

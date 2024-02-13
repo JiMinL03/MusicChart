@@ -96,10 +96,5 @@ document.getElementById('connect').addEventListener('click', function(event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.text())
-    .then(message => {
-        // 받은 메시지를 사용하여 페이지 업데이트 로직 수행
-        updateLabel(message);
-    })
     .catch(error => console.error('Error:', error));
 });
