@@ -1,9 +1,34 @@
-<link rel="stylesheet" type="text/css" th:href="@{/MusicCharts_styles.css}">
-<h1>채연아 여기가 html</h1>
-<div class="container">
-	<label>버튼도 넣을 수 있고 입력도 받을 수 있고 글자를 쓸 수도 있어</label>
-	<form>
-		<input type="text" placeholder="입력 받겠습니당">
-		<button type="submit">버튼눌러주세요!</button>
-	</form>
-</div>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>음악차트</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/MusicCharts_styles.css}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+
+<body>
+	<div class="music">
+		<div class="logo">
+			<img src="free-icon-love-song-3920284.png" height="50px" width="50px">
+		</div>
+		<form name="searchForm" th:action="@{/search}" method="post">
+			<input name="searchMusic" type="text">
+			<button type="submit" id="search">
+				<img src="icons8-수색-30.png" alt="검색" height="30px" width="30px">
+			</button>
+		</form>
+		<button id="details" class="details">
+			<img src="free-icon-more-2732695.png" height="40px" width="40px">
+		</button>
+	</div>
+
+	<div class="container">
+
+	</div>
+	<script src="/JS/MusicCharts.js"></script>
+</body>
+
+</html>
